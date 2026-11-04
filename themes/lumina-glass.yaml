@@ -1,5 +1,5 @@
-Lumina:
-  card-mod-theme: Lumina
+Lumina Glass:
+  card-mod-theme: Lumina Glass
 
   # Page background: soft colour glows on a deep navy base. The glass only reads as
   # glass with something colourful behind it, so keep this unless you replace it.
@@ -130,6 +130,33 @@ Lumina:
   state-water_heater-electric-color: rgb(255,180,50)
   state-water_heater-eco-color: rgb(80,200,140)
   state-water_heater-high_demand-color: rgb(220,80,80)
+
+  # --- Lumina Glass additions: frosted top bar that blends with the page ---
+  app-header-background-color: rgba(10,8,23,0.35)
+  app-header-text-color: rgba(255,255,255,0.88)
+  app-header-border-bottom: 1px solid rgba(255,255,255,0.06)
+  # The glass is a layer behind the bar that also reaches up under the phone's status
+  # bar (iOS lets the page scroll there), so nothing scrolls past unblurred.
+  card-mod-root: |
+    .header {
+      background-color: transparent !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+    .header::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: -200px;
+      z-index: -1;
+      pointer-events: none;
+      background: rgba(10,8,23,0.35);
+      backdrop-filter: blur(24px) saturate(160%);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
 
   # Lumina is a dark design: pick "Dark" as the theme mode in your profile
   modes:

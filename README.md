@@ -1,3 +1,15 @@
+# Lumina Glass
+
+A fork of [kjanko/lumina-homeassistant-theme](https://github.com/kjanko/lumina-homeassistant-theme) (MIT). It is the full Lumina theme, with one addition: **a frosted-glass top bar**. Lumina leaves the dashboard header a solid navy strip that doesn't blend with the glowing page; here the header is a translucent, blurred glass layer that also reaches up under the phone's status bar (the iOS app lets the page scroll there), so content scrolling past the clock and notch is blurred too.
+
+- Theme name: **Lumina Glass** (file `themes/lumina-glass.yaml`). Pick it in your profile with Mode **Dark**.
+- Works with card-mod or its drop-in replacement [UIX](https://github.com/Lint-Free-Technology/uix); the header uses the `card-mod-root` theme key.
+- Install through HACS as a custom repository: `https://github.com/nphil/ha-lumina-glass`, category **Theme**.
+
+Everything below is the upstream README; wherever it says "Lumina" or `themes/lumina.yaml`, read "Lumina Glass" and `themes/lumina-glass.yaml`.
+
+---
+
 <p align="center"><img src="docs/banner.png" alt="Lumina" /></p>
 
 <p align="center">
